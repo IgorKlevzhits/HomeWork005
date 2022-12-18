@@ -40,7 +40,7 @@ void showArray(int[] array)
     Console.WriteLine("]");
 }
 
-int getEvenNumbers(int[] array)
+void getEvenNumbers(int[] array)
 {
 int result = 0;
 for(int i = 0; i < array.Length; i++)
@@ -50,10 +50,21 @@ if(array[i] % 2 == 0)
 result++;
 }
 }
-return result;
+if(result % 10 == 1)
+{
+    Console.WriteLine($"{result} четное число.");
+}
+else if((result % 10 > 1) && (result % 10 < 5))
+{
+    Console.WriteLine($"{result} четных числа.");
+}
+else
+{
+    Console.WriteLine($"{result} четных чисел.");
+}
 }
 int number = getNumber("Введите размер массива: ");
 int[] array = getArray(number);
 Console.Write("В массиве ");
 showArray(array);
-Console.WriteLine($"{getEvenNumbers(array)} четных чисел.");
+getEvenNumbers(array);
