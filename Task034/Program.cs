@@ -18,13 +18,13 @@
 
 int[] getArray(int number)
 {
-Random rnd = new Random();
-int[] array = new int[number];
-for(int i = 0; i < number; i++)
-{
-array[i] = rnd.Next(100, 1000);
-}
-return array;
+    Random rnd = new Random();
+    int[] array = new int[number];
+    for (int i = 0; i < number; i++)
+    {
+        array[i] = rnd.Next(100, 1000);
+    }
+    return array;
 }
 
 void showArray(int[] array)
@@ -42,26 +42,26 @@ void showArray(int[] array)
 
 void getEvenNumbers(int[] array)
 {
-int result = 0;
-for(int i = 0; i < array.Length; i++)
-{
-if(array[i] % 2 == 0)
-{
-result++;
-}
-}
-if(result % 10 == 1)
-{
-    Console.WriteLine($"{result} четное число.");
-}
-else if((result % 10 > 1) && (result % 10 < 5))
-{
-    Console.WriteLine($"{result} четных числа.");
-}
-else
-{
-    Console.WriteLine($"{result} четных чисел.");
-}
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+        {
+            result++;
+        }
+    }
+    if (result % 10 == 1)
+    {
+        Console.WriteLine($"{result} четное число.");
+    }
+    else if ((result % 10 > 1) && (result % 10 < 5))
+    {
+        Console.WriteLine($"{result} четных числа.");
+    }
+    else
+    {
+        Console.WriteLine($"{result} четных чисел.");
+    }
 }
 int number = getNumber("Введите размер массива: ");
 int[] array = getArray(number);

@@ -18,26 +18,26 @@
 
 double[] getArray(int number)
 {
-Random rnd = new Random();
-double[] array = new double[number];
-for(int i = 0; i < number; i++)
-{
-array[i] = rnd.NextDouble() * 100;
-}
-return array;
+    Random rnd = new Random();
+    double[] array = new double[number];
+    for (int i = 0; i < number; i++)
+    {
+        array[i] = rnd.NextDouble() * 100;
+    }
+    return array;
 }
 
 void showArray(double[] array)
 {
-Console.Write($"[{Math.Round(array[0], 2)}");
-if(array.Length > 1)
-{
-for(int i = 1; i < array.Length; i++)
-{
-Console.Write($"; {Math.Round(array[i], 2)}");
-}
-}
-Console.WriteLine("]");
+    Console.Write($"[{Math.Round(array[0], 2)}");
+    if (array.Length > 1)
+    {
+        for (int i = 1; i < array.Length; i++)
+        {
+            Console.Write($"; {Math.Round(array[i], 2)}");
+        }
+    }
+    Console.WriteLine("]");
 }
 
 double differenceMinMax(double[] array)
@@ -46,9 +46,9 @@ double differenceMinMax(double[] array)
     double max = array[0];
     for (int i = 1; i < array.Length; i++)
     {
-        if(min > array[i])
+        if (min > array[i])
             min = array[i];
-        if(max < array[i])
+        if (max < array[i])
             max = array[i];
     }
     return max - min;

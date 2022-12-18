@@ -43,7 +43,7 @@ int getSumOddNumbers(bool programmist, int[] array)
 {
     int result = 0;
     int k;
-    if(programmist)
+    if (programmist)
         k = 1;
     else
         k = 0;
